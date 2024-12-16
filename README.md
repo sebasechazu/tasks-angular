@@ -1,59 +1,39 @@
-# TasksAngular
+# Proyecto Tasks Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+## Estructura del Proyecto
 
-## Development server
+```plaintext
+src/
+├── app/
+│   ├── core/
+│   │   ├── guards/          # Guards generales
+│   │   ├── interceptors/    # Interceptores generales
+│   │   ├── services/        # Servicios globales (por ejemplo, autenticación)
+│   │   ├── models/          # Interfaces y modelos generales
+│   │   ├── constants/       # Constantes generales
+│   │   ├── utils/           # Funciones utilitarias compartidas
+│   │   └── core.module.ts   # Módulo Core
+│   ├── shared/
+│   │   ├── components/      # Componentes reutilizables
+│   │   ├── directives/      # Directivas reutilizables
+│   │   ├── pipes/           # Pipes reutilizables
+│   │   ├── services/        # Servicios compartidos entre módulos
+│   │   └── shared.module.ts # Módulo Shared
+│   ├── features/
+│   │   ├── feature1/
+│   │   │   ├── components/  # Componentes específicos de este módulo
+│   │   │   ├── services/    # Servicios específicos del módulo
+│   │   │   ├── models/      # Interfaces específicas del módulo
+│   │   │   ├── feature1-routing.module.ts
+│   │   │   └── feature1.module.ts
+│   │   ├── feature2/        # Similar a feature1
+│   ├── app-routing.module.ts
+│   └── app.module.ts
+├── assets/                  # Archivos estáticos (imágenes, JSON, etc.)
+│   ├── data/                # Datos estáticos, como JSON
+├── environments/            # Archivos de configuración de entornos
+├── styles/                  # Estilos globales (SCSS o CSS)
+├── index.html
+└── main.ts
 
-To start a local development server, run:
-
-```bash
-ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
